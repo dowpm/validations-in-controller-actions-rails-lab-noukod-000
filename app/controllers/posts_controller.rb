@@ -10,10 +10,10 @@ class PostsController < ApplicationController
   def update
     @post.update(post_params)
 
-    if @post
+    if !@post.errors
       redirect_to post_path(@post)
     else
-      render template: 'posts/edit'
+      render :edit
     end
 
   end
