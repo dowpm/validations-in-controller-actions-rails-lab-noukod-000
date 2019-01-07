@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post
       redirect_to post_path(@post)
     else
-      render template: edit
+      render template: 'posts/edit'
     end
 
   end
